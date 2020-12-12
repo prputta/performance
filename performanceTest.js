@@ -5,13 +5,13 @@ describe("Performance Test", function() {
     var noRequestPerHour = 100000;
     var avgRequestTime = 1000;
 
-    var host = 'http://localhost:8080'
+    var host = 'http://localhost:3003'
 
-    it("performance testing /ping", function(done) {
+    it("performance testing /api/account", function(done) {
         this.timeout(1000 * 60);
 
         var options = {
-            "url": host + '/ping',
+            "url": host + '/api/account',
             "maxSeconds": 30,
             "concurrency": 25,
             "statusCallback": statusCallback
@@ -49,11 +49,11 @@ describe("Performance Test", function() {
         });
     });
 
-    it("performance testing /heaving-ping", function(done) {
+    it("performance testing /api/transaction", function(done) {
         this.timeout(1000 * 60);
 
         var options = {
-            "url": host + '/heavy-ping',
+            "url": host + '/api/transaction',
             "maxSeconds": 30,
             "concurrency": 25,
             "statusCallback": statusCallback

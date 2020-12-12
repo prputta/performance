@@ -9,8 +9,8 @@ app.get('/ping', (req, res) => {
 // second api which waits for 50 millis before responding 
 app.get('/heavy-ping', (req, res) => {
     setTimeout(() => {
-        console.info("eating time for demo");
-        res.send('heavy pong');
+        console.info("HackFest");
+        res.send('Hackathon');
     }, 50)
 });
 
